@@ -207,12 +207,12 @@
             // 
             hideFilePanel.BorderStyle = BorderStyle.FixedSingle;
             hideFilePanel.Controls.Add(hideSize);
-            hideFilePanel.Controls.Add(hideOrExtractFileLabel);
             hideFilePanel.Controls.Add(hideSizeLabel);
             hideFilePanel.Controls.Add(maxHideSize);
             hideFilePanel.Controls.Add(hideBrowser);
             hideFilePanel.Controls.Add(hideOrExtractPath);
             hideFilePanel.Controls.Add(hideSize1);
+            hideFilePanel.Controls.Add(hideOrExtractFileLabel);
             hideFilePanel.Location = new Point(32, 785);
             hideFilePanel.Name = "hideFilePanel";
             hideFilePanel.Size = new Size(550, 146);
@@ -235,9 +235,9 @@
             hideOrExtractFileLabel.AutoSize = true;
             hideOrExtractFileLabel.Location = new Point(0, 4);
             hideOrExtractFileLabel.Name = "hideOrExtractFileLabel";
-            hideOrExtractFileLabel.Size = new Size(168, 31);
+            hideOrExtractFileLabel.Size = new Size(188, 31);
             hideOrExtractFileLabel.TabIndex = 18;
-            hideOrExtractFileLabel.Text = "隐写/提取文件";
+            hideOrExtractFileLabel.Text = "隐写/提取文件 | ";
             // 
             // hideSizeLabel
             // 
@@ -253,7 +253,7 @@
             // 
             maxHideSize.AutoSize = true;
             maxHideSize.BackColor = Color.Transparent;
-            maxHideSize.Location = new Point(443, 4);
+            maxHideSize.Location = new Point(407, 4);
             maxHideSize.Name = "maxHideSize";
             maxHideSize.Size = new Size(28, 31);
             maxHideSize.TabIndex = 17;
@@ -287,7 +287,7 @@
             // 
             hideSize1.AutoSize = true;
             hideSize1.BackColor = Color.Transparent;
-            hideSize1.Location = new Point(210, 4);
+            hideSize1.Location = new Point(174, 4);
             hideSize1.Name = "hideSize1";
             hideSize1.Size = new Size(261, 31);
             hideSize1.TabIndex = 14;

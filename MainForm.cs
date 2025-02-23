@@ -159,7 +159,7 @@ namespace HideInBMP {
         }
 
         private void about_Click(object sender, EventArgs e) {
-            MessageBox.Show("把文件隐写进BMP图片\n原理限制，隐藏文件大小不能超过图片总像素数的 3/8 - 20\n即最大字节数为 width * height * 3 ÷ 8 - 20 = " + maxHideFileSize + "B", "BMP隐写文件 —— By SDSC0623");
+            MessageBox.Show("把文件隐写进BMP图片\n原理限制，24位的BMP图片，隐藏文件大小不能超过图片总像素数的 3/8 - 20\n32位的BMP图片，隐藏文件大小不能超过图片总像素数的 4/8 - 20\n即当前最大字节数为 width * height * " + bitsPerPixel / 8 + " ÷ 8 - 20 = " + maxHideFileSize + "B", "BMP隐写文件 —— By SDSC0623");
         }
 
 
