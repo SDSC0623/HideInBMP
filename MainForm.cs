@@ -61,7 +61,7 @@ namespace HideInBMP {
             BMPFileSize = getFileSize(filePath);
             fromSize.Text = getByteString(BMPFileSize);
             fileOperate(filePath);
-            maxHideFileSize = (long)((double)(width * height * 3) / 8) - HEADER_SIZE;
+            maxHideFileSize = (long)((double)(width * height * (bitsPerPixel / 8)) / 8) - HEADER_SIZE;
             maxHideSize.Text = getByteString(maxHideFileSize);
             fromPath.Text = filePath;
         }
@@ -296,7 +296,7 @@ namespace HideInBMP {
             int stride = (width * (bpp / 8) + 3) & ~3;
 
             // 检查容量
-            if (bits.Length > maxHideFileSize) {
+            if (bits.Length > maxHideFileSize * 8) {
                 throw new InvalidOperationException("隐写数据超过容量限制");
             }
 
